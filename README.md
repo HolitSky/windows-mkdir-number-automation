@@ -122,7 +122,7 @@ Proyek ini dibuat untuk kebutuhan personal dalam mengorganisir folder dengan sis
 
 ⚠️ **PENTING - Penggunaan Asset Ikon**
 
-Ikon-ikon yang tersedia dalam folder `icons/` diambil dari <mcurl name="Wallpapers Clan" url="https://wallpapers-clan.com/"></mcurl> dan tunduk pada ketentuan berikut:
+Ikon-ikon yang tersedia dalam folder `icons/` dan `defaulticons/` diambil dari [Wallpapers Clan](https://wallpapers-clan.com/) dan tunduk pada ketentuan berikut:
 
 > **⚠️ PERINGATAN LISENSI:**
 > 
