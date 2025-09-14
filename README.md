@@ -95,6 +95,60 @@ pyinstaller mkdirauto.spec
 
 File executable akan tersedia di folder `dist/`.
 
+### 🎨 Custom Icon Executable
+
+Aplikasi ini menggunakan custom icon untuk executable yang dikonfigurasi di `mkdirauto.spec`:
+
+```python
+# Di mkdirauto.spec baris 41
+icon='defaulticons\\defaultapp.ico',
+```
+
+**Icon yang digunakan:**
+- `defaultapp.ico` → Icon untuk file executable mkdirauto.exe
+- `defaultfolder.ico` → Icon default untuk folder yang dibuat aplikasi
+
+### 🔄 Troubleshooting Icon
+
+Jika icon executable tidak berubah setelah build:
+
+```powershell
+# Clear Windows icon cache
+Remove-Item -Force "$env:localappdata\IconCache.db"
+
+# Restart explorer untuk refresh
+taskkill /f /im explorer.exe
+Start-Process explorer.exe
+```
+
+### 📦 Update & Clean Build
+
+Setiap kali melakukan update aplikasi, lakukan clean build:
+
+```powershell
+# 1. Hapus folder build dan dist
+Remove-Item -Recurse -Force build, dist
+
+# 2. Build ulang aplikasi
+pyinstaller mkdirauto.spec
+
+# 3. Jika icon tidak berubah, clear cache
+Remove-Item -Force "$env:localappdata\IconCache.db"
+```
+
+### 🚀 Menjalankan Executable
+
+Setelah build selesai:
+
+```powershell
+# Jalankan dari command line
+.\dist\mkdirauto.exe
+
+# Atau double-click file mkdirauto.exe di folder dist/
+```
+
+**Lokasi file:** `dist/mkdirauto.exe`
+
 ## 💡 Contoh Output
 
 Jika Anda memasukkan nama "Project Baru", aplikasi akan membuat folder:

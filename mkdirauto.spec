@@ -5,7 +5,10 @@ a = Analysis(
     ['mkdirauto.pyw'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[
+        ('icons', 'icons'),
+        ('defaulticons', 'defaulticons'),
+    ],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -35,4 +38,11 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon='defaulticons\\defaultapp.ico',
 )
+
+# Manual copy of defaulticons folder
+import shutil
+import os
+if os.path.exists('defaulticons'):
+    shutil.copytree('defaulticons', 'dist/defaulticons', dirs_exist_ok=True)
