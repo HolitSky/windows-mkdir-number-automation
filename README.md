@@ -159,7 +159,7 @@ Karena ini adalah proyek personal, kontribusi tidak diperlukan. Namun, Anda beba
 
 <div align="center">
 
-**Dibuat dengan ❤️ untuk mempermudah workflow harian**
+**Dibuat dengan ❤️ oleh [Holit Sky](https://khalidsaifullah.me/)  untuk mempermudah workflow harian**
 
 *Happy Organizing! 📁✨*
 
